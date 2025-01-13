@@ -9,9 +9,17 @@ export default function Users() {
     setUsers(data.users);
   }
 
+
+  const deleteUser = async (id)=>{
+
+    const {data} = await axios.delete(`${import.meta.env.VITE_BURL}/users/${id}`);
+    console.log(data);
+
+  }
+
   useEffect(() => {
     getUsers();
-  }, [])
+  }, [users])
   return (
     <>
       <Link className='btn btn-primary mt-3' to={'/create'} >Create</Link>
@@ -22,7 +30,7 @@ export default function Users() {
               <div className="card-body">
                 <h5 className="card-title">Name: {user.userName}</h5>
                 <p className="card-text">Email: {user.email}</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <button onClick={()=>deleteUser(user._id)} className='btn btn-danger'> Delete </button>
               </div>
             </div>
           </div>
