@@ -12,7 +12,6 @@ export default function Create() {
         if (response.status === 201) {
             navigate('/users');
         }
-        console.log(response);
     }
 
     return (

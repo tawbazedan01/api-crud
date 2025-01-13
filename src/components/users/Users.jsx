@@ -10,7 +10,6 @@ export default function Users() {
   }
   const deleteUser = async (id)=>{
     const {data} = await axios.delete(`${import.meta.env.VITE_BURL}/users/${id}`);
-    console.log(data);
   }
 
   useEffect(() => {

@@ -12,7 +12,6 @@ export default function Details() {
         setValue("userName",data.user.userName);
         setValue("email",data.user.email);
         setValue("phone",data.user.phone);
-        console.log(data);
     }
 
     useEffect(()=>{
