@@ -39,7 +39,7 @@ export default function Create() {
                     <label htmlFor="floatingInput">Phone</label>
                 </div>
 
-                <button type="submit" className='btn btn-primary'>Add</button>
+                <button type="submit" className='btn btn-primary mb-2'>Add</button>
             </form>
             <DevTool control={control} />
         </section>
